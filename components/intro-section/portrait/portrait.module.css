@@ -1,0 +1,74 @@
+.svg-container-div {
+  /* border: solid 1px red; */
+  width: 45rem;
+  height: 200px;
+}
+.svg-container {
+  /* border: solid 1px rgb(55, 0, 255); */
+  /* display: flex; */
+  min-width: 100%;
+  /* margin: 10% 0; */
+  height: 25dvh;
+  /* min-height: fit-content; */
+}
+
+.muninn-svg {
+  width: 2rem;
+  transform: translate(50%);
+  position: absolute;
+  bottom: 4.5rem;
+  right: calc(50% - 3.2rem);
+  z-index: 116;
+}
+.muninn-takeoff-svg {
+  width: 3.6rem;
+  position: absolute;
+  bottom: 8rem;
+  right: calc(50% - 8rem);
+  transform: translate(50%);
+}
+.muninn-fly1-svg {
+  width: 3.6rem;
+  position: absolute;
+  bottom: 11rem;
+  right: calc(50% - 13rem);
+  transform: translate(50%) rotate(-15deg);
+}
+.muninn-fly2-svg {
+  width: 3.6rem;
+  position: absolute;
+  bottom: 14rem;
+  right: calc(50% - 17rem);
+  transform: translate(50%);
+  z-index: 115;
+}
+.huginn-svg {
+  width: 3.5rem;
+  position: absolute;
+  top: 3.2rem;
+  left: calc(50% - 5rem);
+  z-index: 15;
+  transform: translate(-50%);
+  fill: whitesmoke;
+  /* stroke-width: 0.5; */
+}
+.wyrd-svg {
+  width: 10rem;
+  position: absolute;
+  bottom: 1.7rem;
+  left: 50%;
+  transform: translate(-5rem);
+  /* margin: 11% auto; */
+  /* border: solid 5px #a8a29e;
+  background-color: #d6d3d1; */
+  border-radius: 50%;
+  overflow: hidden;
+  padding: 1%;
+}
+.wyrd-svg svg {
+  scale: 1.1;
+  transform: translateY(0.7rem);
+  border-radius: 50%;
+  /* stroke-width: 1; */
+}
+

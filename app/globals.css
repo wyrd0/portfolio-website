@@ -2,14 +2,64 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
+::root {
   --line-color: #e5e7eb;
 }
-
-html.dark {
-  --line-color: rgba(255, 255, 255, 0.2);
+/* @media (prefers-color-scheme: dark) {
+  ::root {
+    --line-color: #57534e;
+  }
+} */
+*,
+:after,
+:before {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+html {
+  width: 100dvw;
+}
+h1,
+h2,
+h3 {
+  @apply text-slate-600 dark:text-stone-400;
+}
+input:invalid {
+  border-color: '#991b1b';
+}
+.inherit-w-h {
+  width: inherit;
+  height: inherit;
+}
+.button {
+  @apply px-7 py-2 w-5/6 sm:w-fit flex items-center justify-center gap-2 rounded-lg outline-none h-10 focus:scale-[1.05] hover:scale-[1.08] active:scale-[1.05]  hover:shadow-slate-300 hover:shadow-sm  transition;
+}
+.btn-primary {
+  @apply text-center bg-slate-800 text-stone-50 dark:bg-stone-400 dark:text-slate-900 dark:shadow-md dark:hover:shadow-slate-900 dark:shadow-slate-900/[0.7]  dark:border-slate-900 transition;
+}
+.btn-default {
+  @apply bg-stone-50 text-slate-600 border border-slate-200 focus:bg-slate-50 hover:bg-slate-50   hover:shadow-slate-300 hover:shadow-md dark:bg-slate-700 dark:bg-opacity-10 dark:border-stone-500 dark:border-opacity-30 dark:text-stone-400 dark:shadow-sm dark:shadow-slate-900/[0.7] dark:hover:shadow-slate-900 dark:hover:text-stone-300  transition;
 }
 
-.borderBlack {
-  @apply border border-black/10;
+/* footer */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  margin: 10px auto;
+}
+.contact {
+  display: flex;
+  justify-content: space-around;
+  width: 100px;
+  font-size: large;
+}
+.made {
+  font-size: x-small;
+  width: 350px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-around;
 }
