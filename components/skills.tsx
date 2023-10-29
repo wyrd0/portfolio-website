@@ -1,47 +1,45 @@
-"use client";
+'use client';
+import React from 'react';
+import SectionHeading from './section-heading';
+import { skillsData } from '@/lib/data';
+import { useSectionInView } from '@/lib/hooks';
+import { motion } from 'framer-motion';
 
-import React from "react";
-import SectionHeading from "./section-heading";
-import { skillsData } from "@/lib/data";
-import { useSectionInView } from "@/lib/hooks";
-import { motion } from "framer-motion";
-
-const fadeInAnimationVariants = {
+const fadeInAnimationVariant = {
   initial: {
     opacity: 0,
     y: 100,
   },
-  animate: (index: number) => ({
+  animate: (i: number) => ({
     opacity: 1,
     y: 0,
     transition: {
-      delay: 0.05 * index,
+      delay: 0.05 * i, //stagger by i
     },
   }),
 };
 
-export default function Skills() {
-  const { ref } = useSectionInView("Skills");
-
+const Skills = () => {
+  const { ref } = useSectionInView('Skills');
   return (
     <section
-      id="skills"
       ref={ref}
-      className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40"
+      className='mb-28 max-w-[50rem] w-[80%] mx-auto scroll-mt-28 text-center sm:mb-10 '
+      id='skills'
     >
-      <SectionHeading>My skills</SectionHeading>
-      <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
-        {skillsData.map((skill, index) => (
+      <SectionHeading>Skills</SectionHeading>
+      <ul className='flex flex-wrap justify-center gap-2   text-md text-slate-800  dark:text-stone-100 ml-4 mr-4 '>
+        {skillsData.map((skill, i) => (
           <motion.li
-            className="bg-white borderBlack rounded-xl px-5 py-3 dark:bg-white/10 dark:text-white/80"
-            key={index}
-            variants={fadeInAnimationVariants}
-            initial="initial"
-            whileInView="animate"
+            className='btn-default rounded-xl px-4 py-2 hover:border-slate-400/[0.4] hover:shadow-sm dark:bg-slate-700/[0.3] dark:border-stone-500/[.2] dark:text-stone-200/[0.7] dark:hover:text-stone-100'
+            key={i}
+            variants={fadeInAnimationVariant}
+            initial='initial'
+            whileInView='animate'
             viewport={{
               once: true,
             }}
-            custom={index}
+            custom={i}
           >
             {skill}
           </motion.li>
@@ -49,4 +47,7 @@ export default function Skills() {
       </ul>
     </section>
   );
-}
+};
+
+export default Skills;
+

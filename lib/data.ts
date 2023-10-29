@@ -120,7 +120,7 @@ export const experiencesData = [
 export const projectsData = [
   {
     title: 'Croning Muse (Blog)',
-    description: 'A static blog, featuring markdown support.',
+    description: 'A static blog with markdown support.',
     tags: ['React', 'TypeScript', 'Next.js', 'Tailwind', 'Markdown'],
     imageUrl: CroningMuseImg,
     experienceId: '0_sabatical',

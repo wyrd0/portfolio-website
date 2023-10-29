@@ -1,12 +1,8 @@
 'use client';
-
 import SectionHeading from '../section-heading';
 import ContactForm from './contact-form';
 import { motion } from 'framer-motion';
 import { useSectionInView } from '@/lib/hooks';
-// import SubmitButton from './submit-btn';
-// import { sendEmail } from '@/actions/sendEmail';
-// import toast from 'react-hot-toast';
 
 const Contact = () => {
   const { ref } = useSectionInView('Contact');

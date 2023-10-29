@@ -1,15 +1,29 @@
-"use client";
+'use client';
+import { motion } from 'framer-motion';
 
-import React from "react";
-import { motion } from "framer-motion";
-
-export default function SectionDivider() {
+// type SectionDividerProps = {
+//   horizontal?: 'true' | 'false';
+// };
+export const VerticalSectionDivider = () => {
   return (
     <motion.div
-      className="bg-gray-200 my-24 h-16 w-1 rounded-full hidden sm:block dark:bg-opacity-20"
-      initial={{ opacity: 0, y: 100 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.125 }}
+      className='section-divider'
+      initial={{ opacity: 0, rotate: -90 }}
+      whileInView={{ opacity: 0.5, rotate: 0 }}
+      transition={{ duration: 1.25 }}
     ></motion.div>
   );
-}
+};
+
+export const HorizontalSectionDivider = () => {
+  return (
+    <motion.div
+      className='section-divider'
+      initial={{ opacity: 0, rotate: 0 }}
+      whileInView={{ opacity: 0.5, rotate: 90 }}
+      animate={{ opacity: 0.5, rotate: 0 }}
+      transition={{ duration: 1.25 }}
+    ></motion.div>
+  );
+};
+

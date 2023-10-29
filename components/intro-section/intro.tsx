@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { useSectionInView } from '@/lib/hooks';
 import Portrait from './portrait/portrait';
 import IntroButtonGroup from './intro-button-group';
-import MockingBird from './portrait/mocking-bird/mocking-bird';
+
 
 const fadeInAnimationVariant = {
   initial: {

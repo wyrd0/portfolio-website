@@ -41,6 +41,10 @@ input:invalid {
   @apply bg-stone-50 text-slate-600 border border-slate-200 focus:bg-slate-50 hover:bg-slate-50   hover:shadow-slate-300 hover:shadow-md dark:bg-slate-700 dark:bg-opacity-10 dark:border-stone-500 dark:border-opacity-30 dark:text-stone-400 dark:shadow-sm dark:shadow-slate-900/[0.7] dark:hover:shadow-slate-900 dark:hover:text-stone-300  transition;
 }
 
+.section-divider {
+  @apply bg-slate-300 my-28 h-14 w-1 rounded-full  sm:block dark:bg-stone-500;
+}
+
 /* footer */
 .footer {
   display: flex;
@@ -63,3 +67,9 @@ input:invalid {
   align-items: center;
   justify-content: space-around;
 }
+
+.toast-error {
+  background-color: #fafaf9;
+  color: #dc2626;
+}
+

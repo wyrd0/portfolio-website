@@ -26,21 +26,51 @@ export default function RootLayout({
   return (
     <html lang='en' className='!scroll-smooth'>
       <body
-        className={`${josefin_sans.className} bg-gray-50 text-gray-950 relative pt-28 sm:pt-36 dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90`}
+        className={`${josefin_sans.className} bg-stone-100 text-slate-700 relative  dark:bg-slate-800 dark:text-stone-400 `}
       >
-        <div className='bg-[#fbe2e3] absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] dark:bg-[#946263]'></div>
-        <div className='bg-[#dbd7fb] absolute top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-[#676394]'></div>
-
+        <div className='bg-slate-300 absolute top-[56rem] right-[8rem] h-[32rem] w-[32rem] rounded-full blur-[14rem] -z-10 sm:w-[68.75] dark:bg-stone-300 dark:opacity-40 dark:top-[6rem] dark:right-[3rem] dark:h-[10rem]'></div>
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
             <Header />
             {children}
             <Footer />
 
-            <Toaster position='top-right' />
+            <Toaster
+              position='bottom-center'
+              containerStyle={{
+                bottom: 300,
+              }}
+              toastOptions={{
+                success: {
+                  style: {
+                    // border: 'solid 1px #94a3b8',
+                    padding: '16px',
+                    backgroundColor: '#f1f5f9',
+                    color: '#0f766e',
+                  },
+                  iconTheme: {
+                    primary: '#0f766e',
+                    secondary: '#d1fae5',
+                  },
+                },
+                error: {
+                  style: {
+                    // border: 'solid 1px #f87171',
+                    padding: '16px',
+                    backgroundColor: '#f1f5f9',
+                    color: '#b91c1c',
+                  },
+                  iconTheme: {
+                    primary: '#b91c1c',
+                    secondary: '#fee2e2',
+                  },
+                },
+              }}
+            />
             <ThemeSwitch />
           </ActiveSectionContextProvider>
         </ThemeContextProvider>
+        <div className='bg-slate-300 absolute bottom-[36rem] left-[10rem] h-[32rem] w-[32rem] rounded-full blur-[16rem] -z-10 sm:w-[68.75] dark:bg-stone-500 dark:opacity-50 dark:bottom-[40rem] dark:-left-[10rem] dark:h-[70rem] dark:blur-[32rem]'></div>
       </body>
     </html>
   );

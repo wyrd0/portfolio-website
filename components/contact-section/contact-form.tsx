@@ -25,7 +25,6 @@ const ContactForm = () => {
           }
           if (error) {
             console.log(error);
-            // if (error.status)
             emailError =
               'There was a problem with the email address you entered.';
             toast.error(error, {
